@@ -22,19 +22,20 @@ const useStyles = makeStyles((theme) => ({
 function StepThree(props){
   const [comp,setComp] = useState();
   const [coll,setColl]  = useState();
-  const[arr,setArr] =useState([])
+  
   const Continue = () => {
-
+var arr =[]
     props.handleNext();
     var json_string = localStorage.getItem('document');
     console.log('json',json_string);
     var json_obj = JSON.parse( json_string );
     json_obj.coberage = {comp,coll};
-    arr.push(json_obj)
-    console.log(arr);
-    localStorage.setItem('document', arr);
+    arr = [...arr, json_obj];
+     
+    localStorage.setItem('document', JSON.stringify(arr));
   }
   const addNew = ()=>{
+    
     props.handleNew();
   }
   const [value,setValue] = useState(initialState);

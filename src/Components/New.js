@@ -5,6 +5,8 @@ import StepOne from './StepOne';
 import SteoTwo from './SteoTwo';
 import StepThree from './StepThree';
 import Driverinfo from './Driverinfo'
+import Insurancedetails from './Insurancedetails'
+import Pastinformation from './Pastinformation'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -24,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 export const New = () => {
     const [activeStep,setActiveStep] = useState(0);
     function getSteps() {
-        return ['', '', '','',''];
+        return ['', '', '','','',''];
         
     }
 
@@ -50,6 +52,10 @@ export const New = () => {
             return <StepThree handleBack={handleBack} handleNext={handleNext} handleNew={handleNew}/>;
             case 3:
               return <Driverinfo handleBack={handleBack} handleNext={handleNext} handleNew={handleNew}/>;
+              case 4:
+                return <Insurancedetails handleBack={handleBack} handleNext={handleNext} handleNew={handleNew}/>;
+                case 5:
+                  return <Pastinformation handleBack={handleBack} handleNext={handleNext} handleNew={handleNew}/>;
           default:
             return 'Unknown stepIndex';
         }

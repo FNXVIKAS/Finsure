@@ -85,6 +85,7 @@ overflow-x:auto;
     height: 40px;
     width: 50px;
     border-radius: 5px;
+    background-color:rgba(243, 245, 248, 1);
   }
   .distanceClick{
     padding-top: 14px;
@@ -112,6 +113,7 @@ color:white;
     border: solid 1px #ccc;
     padding:15px 25px;
     border-radius:5px;
+    background-color:rgba(243, 245, 248, 1);
   }
   .useForClick{
     margin-right: 5%;
@@ -133,7 +135,7 @@ color:white;
   .addMore{
 width: 513.1445922851562px;
 border-radius: 10px;
-border :1px dotted rgba(57, 75, 99, 0.4);
+border :2px dotted rgba(57, 75, 99, 0.4);
 margin-left: 30%;
 margin-top:3%;
 margin-bottom: 3%;
@@ -152,3 +154,65 @@ font-size: 18px;
     width:33%;
   }
 
+  .howlonginsured{
+    border: solid 1px #ccc;
+    display: inline-block;
+    margin-right: 3%;
+    height: 66px;
+    width: 13%;
+    border-radius: 5px;
+    padding-left: 25px;
+    background-color:rgba(243, 245, 248, 1);
+    
+  }
+  .howlonginsuredclick{
+    border: solid 1px #ccc;
+    display: inline-block;
+    margin-right: 3%;
+    height: 66px;
+    width: 13%;
+    border-radius: 5px;
+    padding-left: 25px;
+    background-color: #518EF8;
+    color:white;
+  }
+  .priorInsurance{
+    height:132px;
+    width:132px;
+    background-color:rgba(243, 245, 248, 1);
+border: 1px solid #DEE7ED;
+border-radius: 15px;
+margin-right: 3%;
+display: inline-block;
+  }
+  .priorInsuranceclick{
+    height:132px;
+    width:132px;
+    background-color:rgba(243, 245, 248, 1);
+    border: 2px solid #518EF8;
+    box-shadow: 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+    border-radius: 15px;
+margin-right: 3%;
+display: inline-block;
+  }
+  .tik{
+    height:29.7px;
+    width:29.7px;
+    border-radius: 50%;
+    background-color: #518EF8;
+    float:right;
+    margin:-10px;
+    display:none;
+  }
+  .tikclick{
+    height:29.7px;
+    width:29.7px;
+    border-radius: 50%;
+    background-color: #518EF8;
+    float:right;
+    margin:-10px;
+    color:white;
+    text-align: center;
+    font-size: 25px;
+    
+  }

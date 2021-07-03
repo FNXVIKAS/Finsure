@@ -39,9 +39,17 @@ const Driverinfo = (props) => {
       console.log('json sads',json_string);
       var json_obj = JSON.parse( json_string );
       console.log(json_obj);
-      setMakes(json_obj.make)
-      setModels(json_obj.model)
-      setYears(json_obj.year)
+      json_obj.map((obj,i) => 
+        setMakes(arr=>[...arr,obj.make])
+      )
+      json_obj.map((obj,i) => 
+      setModels(arr=>[...arr,obj.model])
+      
+    )
+     json_obj.map((obj,i) => 
+     setYears(arr=>[...arr,obj.year])
+    )
+   
 
       console.log(makes);
 
@@ -134,8 +142,10 @@ const Driverinfo = (props) => {
                   <lable style={{color:"rgba(10, 33, 62, 0.6)",fontSize: "14px"}}>Car Make</lable>
                   <br></br>
                   <select style={{height:"50px",width:"80%",background: "rgba(251, 252, 253, 1)",border: "1px solid rgba(10, 33, 62, 0.1)",borderRadius: "5px",fontSize:"20px"}} name="cars" id="cars">
+                  {makes.map((make)=>{
+                    return <option value={make}>{make}</option>
+                  })}
                   
-                  <option value={makes}>{makes}</option>
                 </select>
                 </div>
                 <div className="check">
@@ -143,7 +153,9 @@ const Driverinfo = (props) => {
                   <br></br>
                   <select style={{height:"50px",width:"80%",background: "rgba(251, 252, 253, 1)",border: "1px solid rgba(10, 33, 62, 0.1)",borderRadius: "5px",fontSize:"20px"}} name="cars" id="cars">
                   
-                  <option value={models}>{models}({years})</option>
+                  {models.map((model)=>{
+                    return <option value={model}>{model}</option>
+                  })}
                 </select>
                 </div>
                 </div>

@@ -53,7 +53,7 @@ function StepOne(props) {
   const [allmodel, setAllModel] = useState([])
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
-  const [year,setYear] = useState(0);
+  const [year,setYear] = useState('');
   
   useEffect(() => {
     axios.get('https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json')
@@ -155,6 +155,7 @@ function StepOne(props) {
         <div style={{ width: 300, margin: '50px', display: 'inline-block' }}>
        <p style={{fontFamily:"Inter",fontStyle: "normal",fontWeight: "500",fontSize: "14px",color: "rgba(10, 33, 62, 0.6)"}}>Select Car Year</p> 
         <Autocomplete
+        style={{backgroundColor:"rgba(243, 245, 248, 1)"}}
          value={year}
          onChange={(event, newYear) => {
            setYear(newYear);
@@ -167,6 +168,7 @@ function StepOne(props) {
         <div style={{ width: 300, margin: '50px', display: 'inline-block' }}>
         <p style={{fontFamily:"Inter",fontStyle: "normal",fontWeight: "500",fontSize: "14px",color: "rgba(10, 33, 62, 0.6)"}}>Select Make</p>
         <Autocomplete
+        style={{backgroundColor:"rgba(243, 245, 248, 1)"}}
          value={make}
          onChange={(event, newValue) => {
            setMake(newValue);
@@ -179,6 +181,7 @@ function StepOne(props) {
         <div style={{ width: 300, margin: '50px', display: 'inline-block' }}>
         <p style={{fontFamily:"Inter",fontStyle: "normal",fontWeight: "500",fontSize: "14px",color: "rgba(10, 33, 62, 0.6)"}}>Select Model</p>
         <Autocomplete
+        style={{backgroundColor:"rgba(243, 245, 248, 1)"}}
            value={model}
            onChange={(event, newModel) => {
              setModel(newModel);
