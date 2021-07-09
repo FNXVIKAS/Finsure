@@ -4,6 +4,7 @@ import {Stepper,Step,StepLabel,Typography,Button,FormControlLabel,Checkbox} from
 import { makeStyles } from '@material-ui/core/styles';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { useHistory } from "react-router-dom";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -15,15 +16,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Driverinfo = (props) => {
+const Driverinfo = () => {
+let history = useHistory();
   const Continue = () => {
-
-    props.handleNext();
-
+history.push("/5")
   }
   const Previous = ()=> {
-    
-    props.handleBack();
+    history.push("/3")
   }
   const classes = useStyles();
     const [firstName,setFirstName] = useState();

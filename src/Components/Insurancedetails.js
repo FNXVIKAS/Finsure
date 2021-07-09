@@ -4,6 +4,7 @@ import { Button } from '@material-ui/core';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { makeStyles } from '@material-ui/core/styles';
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -15,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
   }));
   
 const Insurancedetails = (props) => {
+    let history = useHistory();
     const Continue = () => {
 
         props.handleNext();
@@ -22,7 +24,7 @@ const Insurancedetails = (props) => {
     
       }
       const Previous = () => {
-        props.handleBack();
+        history.push("/4")
       }
       const classes = useStyles();
     const [long, setLong] = useState();

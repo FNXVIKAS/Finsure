@@ -11,12 +11,12 @@ import Image6 from './Image6.jpeg'
 import Image7 from './Image7.jpeg'
 import '../App.css';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import { useHistory } from "react-router-dom";
 
 function StepOne(props) {
-
+  let history = useHistory();
   const Continue = (evt) => {
-    evt.preventDefault();
-    props.handleNext();
+   history.push("/2")
     var json_obj;
     json_obj = {make,model,year};
   localStorage.setItem('document', JSON.stringify(json_obj));
