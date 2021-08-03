@@ -178,43 +178,41 @@ display:flex;
 
   .howlonginsured{
     border: solid 1px #ccc;
-    display: inline-block;
+    display: flex;
     margin-right: 3%;
     height: 66px;
-    width: 13%;
+    width: 140px;
     border-radius: 5px;
-    padding-left: 25px;
     background-color:rgba(243, 245, 248, 1);
     
   }
   .howlonginsuredclick{
     border: solid 1px #ccc;
-    display: inline-block;
+    display:flex;
     margin-right: 3%;
     height: 66px;
-    width: 13%;
+    width: 140px;
     border-radius: 5px;
-    padding-left: 25px;
     background-color: #518EF8;
     color:white;
   }
   .priorInsurance{
-    height:132px;
-    width:132px;
+    height:120px;
+    width:110px;
     background-color:rgba(243, 245, 248, 1);
 border: 1px solid #DEE7ED;
 border-radius: 15px;
-margin-right: 3%;
-display: inline-block;
+flex-wrap: wrap;
+margin:5px 15px;;
   }
   .priorInsuranceclick{
-    height:132px;
-    width:132px;
+    height:120px;
+    width:110px;
     background-color:rgba(243, 245, 248, 1);
     border: 2px solid #518EF8;
     box-shadow: 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
     border-radius: 15px;
-margin-right: 3%;
+margin: 5px 15px;;
 display: inline-block;
   }
   .tik{
@@ -297,4 +295,19 @@ img {
   padding: 0 25px 0 0;
   position: relative;
   cursor: pointer;
+}
+.driveDetail{
+  flex:20%;
+  margin:15px;
+}
+@media (max-width: 800px) {
+  .driveDetail {
+    flex: 100%;
+  }
+  .priorInsuranceclick{
+    flex:100%;
+  }
+  .priorInsurance{
+    flex:100%;
+  }
 }
